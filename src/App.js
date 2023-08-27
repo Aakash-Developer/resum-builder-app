@@ -1,11 +1,7 @@
-import EducationFrom from "./components/EducationFrom";
-import ProfileForm from "./components/ProfileFrom";
+import RootRouter from "./routers/RootRouter";
+import 'animate.css';
+
 
 export default function App() {
-  return (
-    <>
-      <ProfileForm />
-      <EducationFrom />
-    </>
-  );
+  return <RootRouter />;
 }
