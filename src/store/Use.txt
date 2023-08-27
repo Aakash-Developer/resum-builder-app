@@ -1,0 +1,14 @@
+  const educations = useSelector((state) => state.resume.educations);
+  const dispatch = useDispatch();
+
+  const handleAddEducation = (education) => {
+    dispatch(addEducation(education));
+  };
+
+  const handleUpdateEducation = (index, updatedEducation) => {
+    dispatch(updateEducation({ index, updatedEducation }));
+  };
+
+  const handleDeleteEducation = (index) => {
+    dispatch(deleteEducation(index));
+  };
