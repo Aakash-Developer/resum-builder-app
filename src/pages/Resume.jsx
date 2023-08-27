@@ -10,11 +10,13 @@ import Button from "../smallComponents/Button";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchResumeData, addEducation, updateEducation, deleteEducation } from "../store/resumeSlice";
 import HTMLCanvasViewer from "../components/HtmlCanvas/HTMLCanvasViewer";
+import EmploymentCard from "../smallComponents/EmploymentCard";
 
 function Resume() {
   const educations = useSelector((state) => state.resume.educations);
   const loading = useSelector((state) => state.resume.loading);
   const error = useSelector((state) => state.resume.error);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -47,6 +49,9 @@ function Resume() {
       <ProjectsForm />
       <Button label="Preview" onClick={hadleClick} />
       <HTMLCanvasViewer htmlContent={<ProfileFrom />} />
+      <EmploymentCard
+      // Implement your edit logic
+      />
     </>
   );
 }
