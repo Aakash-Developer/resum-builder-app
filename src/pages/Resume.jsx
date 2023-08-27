@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchResumeData, addEducation, updateEducation, deleteEducation } from "../store/resumeSlice";
 import HTMLCanvasViewer from "../components/HtmlCanvas/HTMLCanvasViewer";
 import EmploymentCard from "../smallComponents/EmploymentCard";
+import RangeSlider from "../smallComponents/RangeSlider";
 
 function Resume() {
   const educations = useSelector((state) => state.resume.educations);
